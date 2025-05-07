@@ -5,7 +5,7 @@ from PySide6.QtWidgets import (
     QVBoxLayout, QHBoxLayout, QComboBox, QMessageBox, QDialog,
     QLineEdit, QTextEdit
 )
-from PySide6.QtGui import QPixmap, QPalette, QBrush, QFont
+from PySide6.QtGui import QPixmap, QPalette, QBrush, QFont, QIcon
 from PySide6.QtCore import Qt
 
 MOTOS = {
@@ -284,7 +284,7 @@ class VentanaPrincipal(QMainWindow):
         hbox.addWidget(self.combo)
         hbox.addWidget(btn)
 
-        btn_carrito = QPushButton("Ver Carrito")
+        btn_carrito = QPushButton(QIcon("img/icons/carrito.png"), "Ver Carrito")
         btn_carrito.clicked.connect(self.abrir_carrito)
         hbox.addWidget(btn_carrito)
 
